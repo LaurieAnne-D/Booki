@@ -1,12 +1,15 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --filter-bd-color: #D9D9D9;
 }
 
 .fa-solid {
@@ -16,6 +19,7 @@
 body {
     display: flex;
     justify-content: center;
+    padding: 0 50px;
 }
 
 ul {
@@ -48,6 +52,15 @@ a {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .section-title {
@@ -78,6 +91,153 @@ a {
     color: var(--main-bg-color)
 }
 
+/****** Header ***********/
+header {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+header ul {
+    display: flex;
+}
+
+/****** Logo et navigation ***********/
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    display: flex;
+    width: 61.1px;
+    height: 19px;
+    padding: 30px 50px 30px 0;
+}
+
+header nav ul {
+    gap: 68px;
+    margin: 0px 25px;
+}
+
+header nav a {
+    display: inline-block;
+    padding-top: 16px;
+}
+
+header nav a:hover {
+    color: var(--main-color);
+    border-top: var(--main-color) solid 2px;
+}
+
+/****** Titre et sous-titre de la page ***********/
+.group-title {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+/****** Formulaire de recherche ***********/
+form {
+    display: flex;
+    width: calc(100% / 3);
+
+}
+
+header input,
+button {
+    font-size: 18px;
+    font-weight: 700;
+    height: 49px;
+    display: flex;
+    align-items: center;
+}
+
+.fa-location-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    border: var(--main-bg-color)solid 1px;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--main-bg-color);
+    color: #000;
+    font-size: 18px;
+
+}
+
+.fa-magnifying-glass {
+    display: none;
+}
+
+header input {
+    display: flex;
+    border: var(--main-bg-color)solid 1px;
+    text-align: center;
+    width: 195px;
+}
+
+header button {
+    padding: 15px 16px;
+    background-color: var(--main-color);
+    color: white;
+    border: var(--main-color) solid 1px;
+    border-end-end-radius: 15px;
+    border-start-end-radius: 15px;
+
+
+}
+
+/****** Filtres ***********/
+.filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.filters h2 {
+    font-size: 18px;
+}
+
+.filters ul {
+    display: flex;
+    gap: 15px;
+}
+
+.filters li {
+    display: flex;
+    border: var(--filter-bd-color) solid 2px;
+    border-radius: 25px;
+    gap: 10px;
+    padding: 0 19px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.filters li:hover {
+    background-color: #DEEBFF;
+}
+
+/****** Infos ***********/
+header p {
+    display: flex;
+    gap: 10px;
+}
+
+.fa-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: var(--filter-bd-color)solid 1px;
+    border-radius: 100px;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -94,6 +254,54 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hebergements-cards a {
+    width: calc((100% - 60px) / 3);
+}
+
+.hebergements-cards figure {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hebergements img {
+    width: 100%;
+    height: 114px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.hebergements-cards figcaption {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    padding: 0 15px 15px 15px;
+    font-size: 14px;
+}
+
+.hebergements figcaption figure {
+    display: flex;
+    flex-direction: row;
+}
+
+.hebergements .fa-xs {
+    line-height: 1em;
+}
+
+.hebergements div+p {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /****** Populaires ***********/
@@ -141,8 +349,66 @@ a {
     margin-bottom: 5px;
 }
 
+/****** Activites ***********/
+.activites {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+}
 
+.activites li {
+    width: calc(100% / 4);
+}
 
+.activites ul {
+    display: flex;
+    gap: 30px;
+}
+
+.activites img {
+    border-radius: 20px 20px 0px 0px;
+    height: 380px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.activites figure {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.activites figcaption {
+    display: flex;
+    background-color: #fff;
+    padding: 20px 19px;
+    border-radius: 0 0 20px 20px;
+}
+
+/****** Footer ***********/
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+    justify-content: space-between;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: calc(100% / 3);
+}
+
+/****** Liens pied de page ***********/
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
