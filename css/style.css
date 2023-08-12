@@ -123,6 +123,7 @@ header nav ul {
 header nav a {
     display: inline-block;
     padding-top: 16px;
+    border-top: transparent solid 2px;
 }
 
 header nav a:hover {
@@ -140,8 +141,6 @@ header nav a:hover {
 /****** Formulaire de recherche ***********/
 form {
     display: flex;
-    width: calc(100% / 3);
-
 }
 
 header input,
@@ -151,6 +150,7 @@ button {
     height: 49px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .fa-location-dot {
@@ -385,7 +385,9 @@ header p {
     display: flex;
     background-color: #fff;
     padding: 20px 19px;
+    height: 30px;
     border-radius: 0 0 20px 20px;
+    text-align: center;
 }
 
 /****** Footer ***********/
