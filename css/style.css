@@ -157,7 +157,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
+    min-width: 50px;
     border: var(--main-bg-color)solid 1px;
     border-radius: 15px 0 0 15px;
     background-color: var(--main-bg-color);
@@ -223,17 +223,18 @@ header button {
 }
 
 /****** Infos ***********/
-header p {
+header .filters+p {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .fa-info {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     border: var(--filter-bd-color)solid 1px;
     border-radius: 100px;
 }
@@ -513,7 +514,17 @@ footer ul {
     /****** Header ***********/
     header ul {
         display: flex;
+        text-align: center;
     }
+
+    header li {
+        width: 50%;
+    }
+
+    header a {
+        width: 100%;
+    }
+
 
     /****** Logo et navigation ***********/
     header nav {
@@ -523,7 +534,6 @@ footer ul {
     }
 
     header nav img {
-
         padding: 30px;
     }
 
@@ -562,6 +572,11 @@ footer ul {
         margin-right: 20px;
     }
 
+    form input {
+        width: calc(100% - 100px);
+    }
+
+
     form button span {
         display: none;
     }
@@ -587,10 +602,21 @@ footer ul {
 
     .filters ul {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-flow: row wrap;
+        justify-content: center;
         gap: 15px;
         width: 100%
+    }
+
+    .filters li {
+        width: 28vw;
+        font-size: 0.85rem;
+    }
+
+    /****** Infos ***********/
+    header .filters+p {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     /****** Hebergements And Populaires ***********/
@@ -607,6 +633,7 @@ footer ul {
     .hebergements {
         width: 100%;
         background-color: inherit;
+        padding: 20px;
     }
 
     .hebergements-cards {
@@ -626,6 +653,8 @@ footer ul {
     .populaires {
         width: 100%;
         margin-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .populaires-cards a {
